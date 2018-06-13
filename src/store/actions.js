@@ -27,9 +27,9 @@ const actions = {
   },
   sortUsersByWord({commit, state}) {
 
-    const sortByWord = state.filteredUsers.sort((a,b)=> {
-      var x = a.name.toLowerCase();
-      var y = b.name.toLowerCase();
+    const sortByWord = state.filteredUsers.sort((userA,userB)=> {
+      const x = userA.name.toLowerCase();
+      const y = userB.name.toLowerCase();
       return x < y ? -1 : x > y ? 1 : 0;
     })
     commit(SORT_USERS, sortByWord)
@@ -37,9 +37,9 @@ const actions = {
 
   inverseSortUsersByWord({commit, state}) {
 
-    const sortByWord = state.filteredUsers.sort((a,b)=> {
-      var x = a.name.toLowerCase();
-      var y = b.name.toLowerCase();
+    const sortByWord = state.filteredUsers.sort((userA,userB)=> {
+      const x = userA.name.toLowerCase();
+      const y = userB.name.toLowerCase();
       return x < y ? -1 : x > y ? 1 : 0;
     })
     commit(SORT_USERS, sortByWord.reverse())
@@ -52,18 +52,18 @@ const actions = {
     commit(SORT_USERS, sortByCurrency)
   },
   sortUsersByLocation({commit, state}) {
-    const sortByWord = state.filteredUsers.sort((a,b)=> {
-      var x = a.location.toLowerCase();
-      var y = b.location.toLowerCase();
+    const sortByWord = state.filteredUsers.sort((userA,userB)=> {
+      const x = userA.location.toLowerCase();
+      const y = userB.location.toLowerCase();
       return x < y ? -1 : x > y ? 1 : 0;
     })
     commit(SORT_USERS, sortByWord)
   },
   inverseSortUsersByLocation({commit, state}) {
 
-    const sortByWord = state.filteredUsers.sort((a,b)=> {
-      var x = a.location.toLowerCase();
-      var y = b.location.toLowerCase();
+    const sortByWord = state.filteredUsers.sort((userA,userB)=> {
+      const x = userA.location.toLowerCase();
+      const y = userB.location.toLowerCase();
       return x < y ? -1 : x > y ? 1 : 0;
     })
     commit(SORT_USERS, sortByWord.reverse())
