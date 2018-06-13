@@ -1,0 +1,13 @@
+{
+  "name": "gnsdeploy",
+  "version": "1.0.0",
+  "description": "Heroku App",
+  "author": "denys",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install express"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
